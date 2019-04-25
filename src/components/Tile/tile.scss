@@ -1,0 +1,14 @@
+@import '../../base/base';
+
+.tile {
+    background-color: $color-blue;
+    border: 1px solid $color-blue-light;
+    text-align: center;
+    border-radius: 5px;
+    padding: $size-20;
+}
+
+.tile__number {
+    color: $color-white;
+    font-size: $size-32;
+}

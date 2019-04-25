@@ -1,0 +1,12 @@
+@import '../../base/base';
+
+.button {
+    background-color: $color-black;
+    padding: $size-20 $size-40;
+    text-align: center;
+}
+
+.button__label {
+    color: $color-white;
+    font-size: $size-16;
+}

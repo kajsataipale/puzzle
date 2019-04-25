@@ -1,0 +1,17 @@
+@import '../../base/base';
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border: 4px solid $color-cyan-darker;
+    width: 50%;
+    height: 50%;
+    z-index: $z-modal;
+    text-align: center
+}
+
+.modal__message {
+    color: $color-cyan-darker;
+}

@@ -1,0 +1,24 @@
+@import './settings';
+@import './colors';
+@import './breakpoints';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+    $font-family-body: 'Open sans';
+    overflow-x: hidden;
+}
