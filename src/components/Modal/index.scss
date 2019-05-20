@@ -15,3 +15,8 @@
 .modal__message {
     color: $color-cyan-darker;
 }
+
+.modal__close {
+    position: absolute;
+    bottom: 0;
+}
