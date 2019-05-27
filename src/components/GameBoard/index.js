@@ -29,23 +29,36 @@ class GameBoard extends Component {
     })
   }
 
-    checkIfWinner() {
-      this.setState({
+  moveTile(numbers, fromIndex, toIndex) {
+    let temp = numbers[fromIndex];
+    numbers[fromIndex] = numbers[toIndex];
+    numbers[toIndex] = temp;
+  }
+
+  checkIfWinner(numbers) {
+    for (let i = 0, l = numbers.length; i < l; i++) {
+      if (numbers[i] !== i) {
+        
+        this.setState({
           winner: !this.state.winner
-      });
+      })
+        
+      }
     }
+  }
 
   render() {
     const numbers = this.state.numbers;
+    
     return (
       <div className="game-board">
         <div className="game-board__tile-wrapper">
           {numbers.map((item,i) => <Button key={i} label={item} value={item} onClick={this.handleInputChange} />)}
         </div>
 
-        <Button label={'Shuffle'} color='black' onClick={this.newGame} />
+        <Button label={'Shuffle'} color='green' onClick={this.newGame} />
 
-      {this.state.winner && <Modal message={'You win! hurray'}/>}
+        {this.state.winner && <Modal onClick={() => this.setState({ winner: !this.state.winner})} message={'You win! hurray'}/>}
       </div>
     );
   }
